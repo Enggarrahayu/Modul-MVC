@@ -8,6 +8,7 @@ package testcrud;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -43,6 +44,7 @@ public class frmMain extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -63,15 +65,70 @@ public class frmMain extends javax.swing.JFrame {
         etNama = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         etEmail = new javax.swing.JTextField();
-        jPanel4 = new javax.swing.JPanel();
-        bEdit = new javax.swing.JButton();
-        bSave = new javax.swing.JButton();
-        bDel = new javax.swing.JButton();
-        bClear = new javax.swing.JButton();
-        bRefresh = new javax.swing.JButton();
+        jLabel15 = new javax.swing.JLabel();
+        tempatlhr = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        tgllhr = new com.toedter.calendar.JDateChooser();
         jPanel5 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         tb1Data = new javax.swing.JTable();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        bSave = new javax.swing.JButton();
+        bDel = new javax.swing.JButton();
+        bClear = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        bEdit = new javax.swing.JButton();
+        bRefresh = new javax.swing.JButton();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jLabel20 = new javax.swing.JLabel();
+        jPanel14 = new javax.swing.JPanel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        etTelp1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        etNIS1 = new javax.swing.JTextField();
+        jLabel25 = new javax.swing.JLabel();
+        rbLaki1 = new javax.swing.JRadioButton();
+        jRadioButton3 = new javax.swing.JRadioButton();
+        jLabel26 = new javax.swing.JLabel();
+        etSMP1 = new javax.swing.JTextField();
+        jLabel27 = new javax.swing.JLabel();
+        etKelas1 = new javax.swing.JTextField();
+        jLabel28 = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        taAlamat1 = new javax.swing.JTextArea();
+        jLabel29 = new javax.swing.JLabel();
+        etNama1 = new javax.swing.JTextField();
+        jLabel30 = new javax.swing.JLabel();
+        etEmail1 = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        tempatlhr1 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        ttl = new com.toedter.calendar.JDateChooser();
+        jPanel15 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        tb1Data1 = new javax.swing.JTable();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        bSave1 = new javax.swing.JButton();
+        bDel1 = new javax.swing.JButton();
+        bClear1 = new javax.swing.JButton();
+        jPanel18 = new javax.swing.JPanel();
+        bEdit1 = new javax.swing.JButton();
+        bRefresh1 = new javax.swing.JButton();
+        bEdit2 = new javax.swing.JButton();
+        jLabel35 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jLabel34 = new javax.swing.JLabel();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -84,17 +141,13 @@ public class frmMain extends javax.swing.JFrame {
             .addGap(0, 100, Short.MAX_VALUE)
         );
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setBackground(new java.awt.Color(255, 255, 255));
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         jPanel2.setBackground(new java.awt.Color(255, 0, 51));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("FORM BIDOATA SISWA SMK TELKOM MALANG ");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,14 +162,16 @@ public class frmMain extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
         jLabel13.setText("The Real Informatic Schools");
-        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 60, -1, -1));
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("The Real Informatic Schools");
-        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+        jPanel2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
 
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, 80));
+        jPanel6.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 480, 70));
 
         jPanel3.setBackground(new java.awt.Color(204, 204, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -128,9 +183,9 @@ public class frmMain extends javax.swing.JFrame {
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
-        jLabel4.setText("Jenis Kelamin");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
-        jPanel3.add(etTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 160, 30));
+        jLabel4.setText("Tanggal Lahir");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
+        jPanel3.add(etTelp, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 160, 30));
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel5.setText("NIS");
@@ -139,7 +194,7 @@ public class frmMain extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setText("Alamat");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 430, -1, -1));
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, -1, -1));
 
         rbLaki.setText("Laki-Laki");
         jPanel3.add(rbLaki, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
@@ -160,18 +215,18 @@ public class frmMain extends javax.swing.JFrame {
 
         jLabel8.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel8.setText("Kelas");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 260, -1, -1));
-        jPanel3.add(etKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 160, 30));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
+        jPanel3.add(etKelas, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 160, 30));
 
         jLabel9.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel9.setText("No Telp");
-        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, -1, -1));
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, -1));
 
         taAlamat.setColumns(20);
         taAlamat.setRows(5);
         jScrollPane1.setViewportView(taAlamat);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, 180, 80));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 180, 80));
 
         jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setText("Nama Siswa");
@@ -180,57 +235,24 @@ public class frmMain extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setText("Email");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
-        jPanel3.add(etEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, 160, 30));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
+        jPanel3.add(etEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 160, 30));
 
-        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 210, 540));
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel15.setText("Jenis Kelamin");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(153, 153, 153));
-        jPanel4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        bEdit.setText("Edit");
-        bEdit.addActionListener(new java.awt.event.ActionListener() {
+        tempatlhr.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bEditActionPerformed(evt);
+                tempatlhrActionPerformed(evt);
             }
         });
-        jPanel4.add(bEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 20, -1, -1));
+        jPanel3.add(tempatlhr, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 150, 30));
 
-        bSave.setBackground(new java.awt.Color(255, 255, 255));
-        bSave.setText("Save");
-        bSave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bSaveActionPerformed(evt);
-            }
-        });
-        jPanel4.add(bSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, -1, -1));
-
-        bDel.setText("Delete");
-        bDel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bDelActionPerformed(evt);
-            }
-        });
-        jPanel4.add(bDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
-
-        bClear.setText("Clear");
-        bClear.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bClearActionPerformed(evt);
-            }
-        });
-        jPanel4.add(bClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 20, -1, -1));
-
-        bRefresh.setText("Refresh");
-        bRefresh.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bRefreshActionPerformed(evt);
-            }
-        });
-        jPanel4.add(bRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, -1, -1));
-
-        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 590, 60));
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel16.setText("Tempat Lahir");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        jPanel3.add(tgllhr, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 150, 30));
 
         jPanel5.setBackground(new java.awt.Color(204, 204, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -253,15 +275,395 @@ public class frmMain extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(tb1Data);
 
-        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 620, 290));
+        jPanel5.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 620, 290));
 
-        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 160, 650, 470));
+        jPanel8.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel7.setBackground(new java.awt.Color(236, 20, 20));
+        jPanel7.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bSave.setBackground(new java.awt.Color(255, 255, 255));
+        bSave.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bSave.setText("Save");
+        bSave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSaveActionPerformed(evt);
+            }
+        });
+        jPanel7.add(bSave, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 90, 40));
+
+        bDel.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 14)); // NOI18N
+        bDel.setText("Delete");
+        bDel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDelActionPerformed(evt);
+            }
+        });
+        jPanel7.add(bDel, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 90, 40));
+
+        bClear.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bClear.setText("Clear");
+        bClear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bClearActionPerformed(evt);
+            }
+        });
+        jPanel7.add(bClear, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 80, 40));
+
+        jPanel8.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 330, 60));
+
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel4.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bEdit.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bEdit.setText("Edit");
+        bEdit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEditActionPerformed(evt);
+            }
+        });
+        jPanel4.add(bEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 100, 40));
+
+        bRefresh.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bRefresh.setText("Refresh");
+        bRefresh.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRefreshActionPerformed(evt);
+            }
+        });
+        jPanel4.add(bRefresh, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 110, 40));
+
+        jPanel8.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 80, 330, 60));
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 160, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        jPanel8.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 160, 70));
+
+        jPanel10.setBackground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 160, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 70, Short.MAX_VALUE)
+        );
+
+        jPanel8.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 0, -1, -1));
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel12.setBackground(new java.awt.Color(255, 0, 51));
+        jPanel12.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("FORM BIDOATA SISWA SMK TELKOM MALANG ");
+        jPanel12.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+
+        jLabel18.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("The Real Informatic Schools");
+        jPanel12.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, -1, -1));
+
+        jLabel19.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("The Real Informatic Schools");
+        jPanel12.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, -1));
+
+        jLabel21.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("The Real Informatic Schools");
+        jPanel12.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 10, -1, -1));
+
+        jPanel13.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel20.setFont(new java.awt.Font("Times New Roman", 0, 11)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("The Real Informatic Schools");
+        jPanel13.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+
+        jPanel12.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 10, 480, 90));
+
+        jPanel11.add(jPanel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 940, 100));
+
+        jPanel14.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel14.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel22.setBackground(new java.awt.Color(255, 0, 51));
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel22.setText("ISIAN DATA SISWA");
+        jPanel14.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, -1, -1));
+
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel23.setText("Tanggal Lahir");
+        jPanel14.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 330, -1, -1));
+        jPanel14.add(etTelp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 530, 160, 30));
+
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel24.setText("NIS");
+        jPanel14.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
+        jPanel14.add(etNIS1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 150, 30));
+
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel25.setText("Alamat");
+        jPanel14.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 570, -1, -1));
+
+        rbLaki1.setText("Laki-Laki");
+        jPanel14.add(rbLaki1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+
+        jRadioButton3.setText("Perempuan");
+        jPanel14.add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, -1, -1));
+
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel26.setText("Asal SMP");
+        jPanel14.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
+
+        etSMP1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                etSMP1ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(etSMP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 150, 30));
+
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel27.setText("Kelas");
+        jPanel14.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 400, -1, -1));
+        jPanel14.add(etKelas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 420, 160, 30));
+
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel28.setText("No Telp");
+        jPanel14.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, -1, -1));
+
+        taAlamat1.setColumns(20);
+        taAlamat1.setRows(5);
+        jScrollPane3.setViewportView(taAlamat1);
+
+        jPanel14.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 590, 180, 80));
+
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel29.setText("Nama Siswa");
+        jPanel14.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
+        jPanel14.add(etNama1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 150, 30));
+
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel30.setText("Email");
+        jPanel14.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 450, -1, -1));
+        jPanel14.add(etEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 470, 160, 30));
+
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel31.setText("Jenis Kelamin");
+        jPanel14.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+
+        tempatlhr1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tempatlhr1ActionPerformed(evt);
+            }
+        });
+        jPanel14.add(tempatlhr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 290, 150, 30));
+
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
+        jLabel32.setText("Tempat Lahir");
+        jPanel14.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        jPanel14.add(ttl, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 150, 30));
+
+        jPanel11.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 210, 730));
+
+        jPanel15.setBackground(new java.awt.Color(153, 153, 153));
+        jPanel15.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        tb1Data1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "NIS", "NamaSiswa", "AsalSMP", "JenisKelamin", "Kelas", "Email", "NoTelp", "Alamat"
+            }
+        ));
+        tb1Data1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tb1Data1MouseClicked(evt);
+            }
+        });
+        jScrollPane4.setViewportView(tb1Data1);
+
+        jPanel15.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 620, 290));
+
+        jPanel11.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 290, 660, 540));
+
+        jPanel16.setBackground(new java.awt.Color(204, 204, 255));
+        jPanel16.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel17.setBackground(new java.awt.Color(236, 20, 20));
+        jPanel17.setFont(new java.awt.Font("Microsoft JhengHei UI Light", 1, 14)); // NOI18N
+        jPanel17.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bSave1.setBackground(new java.awt.Color(255, 255, 255));
+        bSave1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bSave1.setText("Save");
+        bSave1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bSave1ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(bSave1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 90, 40));
+
+        bDel1.setFont(new java.awt.Font("Microsoft JhengHei Light", 1, 14)); // NOI18N
+        bDel1.setText("Delete");
+        bDel1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bDel1ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(bDel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 90, 40));
+
+        bClear1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bClear1.setText("Clear");
+        bClear1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bClear1ActionPerformed(evt);
+            }
+        });
+        jPanel17.add(bClear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 10, 80, 40));
+
+        jPanel16.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 330, 60));
+
+        jPanel18.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel18.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createCompoundBorder(), javax.swing.BorderFactory.createCompoundBorder()));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        bEdit1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bEdit1.setText("Print");
+        bEdit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEdit1ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(bEdit1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 90, 40));
+
+        bRefresh1.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bRefresh1.setText("Refresh");
+        bRefresh1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bRefresh1ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(bRefresh1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 40));
+
+        bEdit2.setFont(new java.awt.Font("Microsoft JhengHei UI", 1, 14)); // NOI18N
+        bEdit2.setText("Edit");
+        bEdit2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bEdit2ActionPerformed(evt);
+            }
+        });
+        jPanel18.add(bEdit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 100, 40));
+
+        jPanel16.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 330, 60));
+
+        jLabel35.setFont(new java.awt.Font("Tunga", 1, 18)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel35.setText("TANGGAL");
+        jPanel16.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, -1, -1));
+
+        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setBorder(new javax.swing.border.MatteBorder(null));
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel34.setFont(new java.awt.Font("Tunga", 1, 18)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel34.setText("JAM");
+        jPanel19.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+
+        jPanel16.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 20, 230, 110));
+
+        jPanel11.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 110, 660, 150));
+
+        getContentPane().add(jPanel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 950, 850));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void bSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSaveActionPerformed
          
+
+    }//GEN-LAST:event_bSaveActionPerformed
+
+    private void bDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDelActionPerformed
+     
+    }//GEN-LAST:event_bDelActionPerformed
+
+    private void bClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClearActionPerformed
+        
+       
+    }//GEN-LAST:event_bClearActionPerformed
+
+    private void bRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRefreshActionPerformed
+
+        
+    }//GEN-LAST:event_bRefreshActionPerformed
+
+    private void bEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEditActionPerformed
+        
+    }//GEN-LAST:event_bEditActionPerformed
+
+    private void etSMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etSMPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_etSMPActionPerformed
+
+    private void tb1DataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb1DataMouseClicked
+
+
+
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tb1DataMouseClicked
+
+    private void tempatlhrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatlhrActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tempatlhrActionPerformed
+
+    private void etSMP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etSMP1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_etSMP1ActionPerformed
+
+    private void tempatlhr1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tempatlhr1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tempatlhr1ActionPerformed
+
+    private void tb1Data1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb1Data1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tb1Data1MouseClicked
+
+    private void bSave1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bSave1ActionPerformed
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        String tanggal = dateFormat.format(tanggal.getDate());
         if("".equals(etNIS.getText()) || "".equals(taAlamat.getText()) || "".equals(etSMP.getText()) || "".equals(etSMP.getText()) || 
                 "".equals(etKelas.getText()) || "".equals(etNama.getText()) || "".equals(etEmail.getText())){
             JOptionPane.showMessageDialog(this, "Harap Lengkapi Data","Error",JOptionPane.WARNING_MESSAGE);
@@ -276,16 +678,16 @@ public class frmMain extends javax.swing.JFrame {
                     + "VALUES('"+etNIS.getText()+"','"+etNama.getText()+"','"+etSMP.getText()+"','"+JK+"','"+etKelas.getText()+"','"+etEmail.getText()+"','"+etTelp.getText()+"','"+taAlamat.getText()+"')";
             int status = KoneksiDB.execute(SQL);
             if (status == 1){
-                JOptionPane.showMessageDialog(this, "Data berhasil diedit", "Sukses", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Data berhasil disimpan", "Sukses", JOptionPane.INFORMATION_MESSAGE);
                 selectData();
             }else {
                 JOptionPane.showMessageDialog(this,"Data gagal ditambahkan","Gagal",JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_bSaveActionPerformed
+    }//GEN-LAST:event_bSave1ActionPerformed
 
-    private void bDelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDelActionPerformed
-       int baris = tb1Data.getSelectedRow();
+    private void bDel1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bDel1ActionPerformed
+          int baris = tb1Data.getSelectedRow();
         if (baris != -1) {
             String NIS = tb1Data.getValueAt(baris, 0).toString();
             String SQL = "DELETE FROM t_siswa WHERE NIS='"+NIS+"'";
@@ -299,9 +701,9 @@ public class frmMain extends javax.swing.JFrame {
         }   else {
             JOptionPane.showMessageDialog(this, "Pilih baris data terlebih dahulu","Error",JOptionPane.WARNING_MESSAGE);
         }
-    }//GEN-LAST:event_bDelActionPerformed
+    }//GEN-LAST:event_bDel1ActionPerformed
 
-    private void bClearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClearActionPerformed
+    private void bClear1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bClear1ActionPerformed
         etSMP.setText("");
         etNIS.setText("");
         etKelas.setText("");
@@ -310,16 +712,18 @@ public class frmMain extends javax.swing.JFrame {
         taAlamat.setText("");
         etTelp.setText("");
         etNama.setText("");
-       
-    }//GEN-LAST:event_bClearActionPerformed
+    }//GEN-LAST:event_bClear1ActionPerformed
 
-    private void bRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRefreshActionPerformed
+    private void bEdit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEdit1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bEdit1ActionPerformed
 
-        selectData();
-    }//GEN-LAST:event_bRefreshActionPerformed
+    private void bRefresh1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bRefresh1ActionPerformed
+       selectData();
+    }//GEN-LAST:event_bRefresh1ActionPerformed
 
-    private void bEditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEditActionPerformed
-        if ("".equals(etNIS.getText()) || "".equals(taAlamat.getText()) ||
+    private void bEdit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bEdit2ActionPerformed
+      if ("".equals(etNIS.getText()) || "".equals(taAlamat.getText()) ||
                 "".equals(etTelp.getText())) {
             JOptionPane.showMessageDialog(this, "Harap lengkapi data","Error",JOptionPane.WARNING_MESSAGE);
             
@@ -345,18 +749,7 @@ public class frmMain extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(this, "Data gagal diupdate","Sukses", JOptionPane.WARNING_MESSAGE);
             }
         }
-    }//GEN-LAST:event_bEditActionPerformed
-
-    private void etSMPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_etSMPActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_etSMPActionPerformed
-
-    private void tb1DataMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tb1DataMouseClicked
-
-
-
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tb1DataMouseClicked
+    }//GEN-LAST:event_bEdit2ActionPerformed
         public void selectData(){
             String kolom[] = {"NIS","NamaSiswa","AsalSMP","JenisKelamin","Kelas","Email","NoTelp","Alamat"};
             DefaultTableModel dtm = new DefaultTableModel(null,kolom);
@@ -423,25 +816,57 @@ public class frmMain extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bClear;
+    private javax.swing.JButton bClear1;
     private javax.swing.JButton bDel;
+    private javax.swing.JButton bDel1;
     private javax.swing.JButton bEdit;
+    private javax.swing.JButton bEdit1;
+    private javax.swing.JButton bEdit2;
     private javax.swing.JButton bRefresh;
+    private javax.swing.JButton bRefresh1;
     private javax.swing.JButton bSave;
+    private javax.swing.JButton bSave1;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JTextField etEmail;
+    private javax.swing.JTextField etEmail1;
     private javax.swing.JTextField etKelas;
+    private javax.swing.JTextField etKelas1;
     private javax.swing.JTextField etNIS;
+    private javax.swing.JTextField etNIS1;
     private javax.swing.JTextField etNama;
+    private javax.swing.JTextField etNama1;
     private javax.swing.JTextField etSMP;
+    private javax.swing.JTextField etSMP1;
     private javax.swing.JTextField etTelp;
+    private javax.swing.JTextField etTelp1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -449,16 +874,40 @@ public class frmMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JRadioButton rbLaki;
+    private javax.swing.JRadioButton rbLaki1;
     private javax.swing.JTextArea taAlamat;
+    private javax.swing.JTextArea taAlamat1;
     private javax.swing.JTable tb1Data;
+    private javax.swing.JTable tb1Data1;
+    private javax.swing.JTextField tempatlhr;
+    private javax.swing.JTextField tempatlhr1;
+    private com.toedter.calendar.JDateChooser tgllhr;
+    private com.toedter.calendar.JDateChooser ttl;
     // End of variables declaration//GEN-END:variables
             
   

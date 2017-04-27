@@ -74,6 +74,11 @@ public class Login extends javax.swing.JFrame {
         jPanel1.add(su, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
 
         ex.setText("Exit");
+        ex.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exActionPerformed(evt);
+            }
+        });
         jPanel1.add(ex, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 230, -1, -1));
 
         si.setText("Sign In");
@@ -134,6 +139,10 @@ public class Login extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"Mohon maaf, mohon ulangi lagi prosedur");
         }
     }//GEN-LAST:event_suActionPerformed
+
+    private void exActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_exActionPerformed
 
     /**
      * @param args the command line arguments
